@@ -12,6 +12,19 @@
             <a class="return-link" href="https://www.kelcimensah.dev">&nbsp; &#8592; back to www.kelcimensah.dev</a>
         </div>
 
+        <table class="close" id="banner">
+            <tr>
+                <td>Due to the COVID-19 pandemic, the outline of this course was altered from previous Spring semesters at Rutgers University. The following course material has been modified after March 13, 2020 as the entire semester was moved online.</td>
+                <td>
+                    <div class="close-container">
+                    <div class="leftright"></div>
+                    <div class="rightleft"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
         <div id="content">
             <div class="w3-row-padding">
 
@@ -27,6 +40,10 @@
                     <p>08 - Binary Tree and Huffman Coding</p>
                     <p>09 - Hash Table</p>
                     <p>10 - Heap</p>
+                    <p>11 - Graphs: Representation, Traversal</p>
+                    <p>12 - Graphs: Topological Sorting, Traversal, Dijkstra's Algorithm</p>
+                    <p>13 - Sorting</p>
+                    <p>(*) Dijkstra's Algorithm Analysis</p>
                         <br>
                     <h2 id="subtitle">Assignments</h2>
                     <p>Polynomial</p>
@@ -35,8 +52,8 @@
                     <p>Little Search Engine</p>
                 </div>
 
-                <div style="height: 900px; overflow-y: scroll" class="w3-threequarter">
-                    <h2>Paris</h2>
+                <div id="bigO" class="w3-threequarter">
+                    <h1>Big O</h1>
                     <p>Paris is the capital of France.</p>
                     <p style="font-size: 40px">The Paris area is one of the largest population centers in Europe,
                         with more than 12 million inhabitants.he Paris area is one of the largest population centers in Europe,
@@ -49,6 +66,19 @@
                         with more than 12 million inhabitants.he Paris area is one of the largest population centers in Europe,
                         with more than 12 million inhabitants.</p>
                 </div>
+            </div>
         </div>
+
     </body>
 </html>
+
+<script>
+    var closebtns = document.getElementsByClassName("close");
+    var i;
+
+    for (i = 0; i < closebtns.length; i++) {
+        closebtns[i].addEventListener("click", function() {
+            this.style.display = 'none';
+        });
+    }
+</script>
