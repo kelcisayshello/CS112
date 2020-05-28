@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#content {
+    margin: 3em;
+    overflow-y: scroll;
+    position: relative;
+}
+
+#subtitle {
+    font-family: 'Playfair Display', serif;
+}
+
+.navigation {
+    width: 100%;
+    background-color: #F9F9F9;
+    margin: 0px;
+    padding: 10px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.07);
+}
+
+.return-link {
+    font-size: 11px;
+    color: #CCCCCC;
+    text-decoration: none;
+}
