@@ -9,8 +9,9 @@ body {
     position: relative;
 }
 
-#subtitle {
+.subtitle {
     font-family: 'Playfair Display', serif;
+    display: block;
 }
 
 .navigation {
@@ -71,14 +72,12 @@ body {
     transition: all 0.3s ease-in;
 }
 
-label {
-    color: white;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 0.6em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease-in;
-    opacity: 0;
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    overflow-y: scroll;
+    height: 900px;
 }
 
 .close-container:hover .leftright {
@@ -93,7 +92,20 @@ label {
     opacity: 1;
 }
 
-#bigO {
-    height: 900px;
-    overflow-y: scroll;
+.nav-link {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+    background: none;
+}
+
+.nav-link:hover {
+    color: #48C9B0;
+}
+
+.header {
+    font-weight: 600;
 }

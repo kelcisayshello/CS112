@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -24,47 +25,50 @@
             </tr>
         </table>
 
-
         <div id="content">
             <div class="w3-row-padding">
 
                 <div id="menu" class="w3-quarter">
-                    <h1 id="subtitle">Rutgers CS112</h1>
-                    <p>01 - Big O</p>
-                    <p>02 - Linked Lists</p>
-                    <p>03 - Linked Lists and Recursion</p>
-                    <p>04 - Stack, ArrayList, and Queue</p>
-                    <p>05 - Sequential and Binary Search</p>
-                    <p>06 - Binary Search Tree</p>
-                    <p>07 - AVL Tree</p>
-                    <p>08 - Binary Tree and Huffman Coding</p>
-                    <p>09 - Hash Table</p>
-                    <p>10 - Heap</p>
-                    <p>11 - Graphs: Representation, Traversal</p>
-                    <p>12 - Graphs: Topological Sorting, Traversal, Dijkstra's Algorithm</p>
-                    <p>13 - Sorting</p>
-                    <p>(*) Dijkstra's Algorithm Analysis</p>
+                    <h1 class="subtitle">Rutgers CS112</h1>
+                    <button class="nav-link" onclick="displayContent(event, 'BigO')">01 - Big O</button>
+                    <button class="nav-link" onclick="displayContent(event, 'LinkedList')">02 - Linked Lists</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Recursion')">03 - Linked Lists and Recursion</button>
+                    <button class="nav-link" onclick="displayContent(event, 'SAQ')">04 - Stack, ArrayList, and Queue</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Sequential')">05 - Sequential and Binary Search</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Binary')">06 - Binary Search Tree</button>
+                    <button class="nav-link" onclick="displayContent(event, 'AVL')">07 - AVL Tree</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Huffman')">08 - Binary Tree and Huffman Coding</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Hash')">09 - Hash Table</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Hash')">10 - Heap</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Graphs')">11 - Graphs: Representation, Traversal</button>
+                    <button class="nav-link" onclick="displayContent(event, 'GraphTraversal')">12 - Graphs: Topological Sorting, Traversal, Dijkstra's Algorithm</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Sorting')">13 - Sorting</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Sorting')">(*) Dijkstra's Algorithm Analysis</button>
                         <br>
-                    <h2 id="subtitle">Assignments</h2>
-                    <p>Polynomial</p>
-                    <p>Expression Evaluate</p>
-                    <p>Trie</p>
-                    <p>Little Search Engine</p>
+                    <h2 class="subtitle">Assignments</h2>
+                    <button class="nav-link" onclick="displayContent(event, 'Polynomial')">Polynomial</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Polynomial')">Expression Evaluate</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Polynomial')">Trie</button>
+                    <button class="nav-link" onclick="displayContent(event, 'Polynomial')">Little Search Engine</button>
                 </div>
 
-                <div id="bigO" class="w3-threequarter">
-                    <h1>Big O</h1>
-                    <p>Paris is the capital of France.</p>
-                    <p style="font-size: 40px">The Paris area is one of the largest population centers in Europe,
-                        with more than 12 million inhabitants.he Paris area is one of the largest population centers in Europe,
-                        with more than 12 million inhabitants.he Paris area is one of the largest population centers in Europe,
-                        with more than 12 million inhabitants.he Paris area is one of the largest population centers in Europe,
-                        with more than 12 million inhabitants.he Paris area is one of the largest population centers in Europe,
-                        with more than 12 million inhabitants.he Paris area is one of the largest population centers in Europe,
-                        with more than 12 million inhabitants.he Paris area is one of the largest population centers in Europe,
-                        with more than 12 million inhabitants.he Paris area is one of the largest population centers in Europe,
-                        with more than 12 million inhabitants.he Paris area is one of the largest population centers in Europe,
-                        with more than 12 million inhabitants.</p>
+                <div class="w3-threequarter">
+
+                    <div id="BigO" class="tabcontent">
+                        <div id="ps-bigo"></div>
+                    </div>
+
+                    <div id="LinkedList" class="tabcontent">
+                        <h1 class="header">Linked Lists</h1>
+                        <p>Paris is the capital of France.</p>
+                    </div>
+
+                    <div id="Recursion" class="tabcontent">
+                        <h1 class="header">Linked Lists and Recursion</h1>
+                        <p>Tokyo is the capital of Japan.</p>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -81,4 +85,24 @@
             this.style.display = 'none';
         });
     }
+
+    function displayContent(event, problemset) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(problemset).style.display = "block";
+        event.currentTarget.className += " active";
+    }
+
+    $(document).ready(function(){
+        $('#ps-bigo').load("problemsets/bigo.html");
+        $('#ps2').load("problemsets/bigo.html");
+        $('#ps3').load("problemsets/bigo.html");
+    });
 </script>
