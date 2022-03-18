@@ -1,3 +1,4 @@
+// function to close COVID-19 warning banner
 var closebtns = document.getElementsByClassName("close");
 var i;
 
@@ -7,6 +8,7 @@ for (i = 0; i < closebtns.length; i++) {
     });
 }
 
+// function to cycle through notes via #menu links 
 function displayContent(event, problemset) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("content");
@@ -21,8 +23,8 @@ function displayContent(event, problemset) {
     event.currentTarget.className += " active";
 }
 
-$(document).ready(function(){
-    $('#ps-bigo').load("problemsets/bigo.html");
-    $('#ps2').load("problemsets/bigo.html");
-    $('#ps3').load("problemsets/bigo.html");
-});
+// $(document).ready(function(){
+//     $('#ps-bigo').load("problemsets/bigo.html");
+//     $('#ps2').load("problemsets/bigo.html");
+//     $('#ps3').load("problemsets/bigo.html");
+// });
