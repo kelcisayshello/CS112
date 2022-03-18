@@ -57,6 +57,7 @@ h1 { font-size: 250%; }
     border-radius: 4px;
     background-color: #ebebeb;
     /* border: none; */
+    cursor: pointer;
 }
 
 .navigation button:hover { background-color: #DDD; }
