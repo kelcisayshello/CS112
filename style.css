@@ -68,9 +68,10 @@ h2 {
     font-size: 16px;
     color: #fff;
     cursor: pointer;
+    transition: all 400ms ease-in-out; 
 }
 
-#banner:hover { background-color: #0F42FA; }
+#banner:hover { background-color: #222; }
 
 .content {
     display: none;
@@ -80,18 +81,29 @@ h2 {
     height: 900px;
 }
 
-#menu button {
+.content a { 
+    text-decoration: none; 
+    transition: all 400ms ease-in-out; 
+}
+
+.content a:hover { 
+    background-color: #F4C672; 
+    text-decoration: underline;
+}
+
+.menulinks {
     text-decoration: none;
     border: none;
     outline: none;
     display: block;
-    margin: 10px 0px;
+    margin: 10px 0;
     text-align: left;
     background: none;
     transition: all 400ms ease; 
+    cursor: pointer;
 }
 
-#menu button:hover {
+.menulinks:hover {
     color: #426BFB;
     text-decoration: underline;
 }
