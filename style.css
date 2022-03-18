@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
     margin: 0px;
     padding: 0px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 #content {
@@ -11,7 +14,9 @@ body {
 }
 
 .subtitle {
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
+    font-family: "Inter", sans-serif;
+    font-size: 250%;
     display: block;
     font-weight: 900;
 }
@@ -36,6 +41,7 @@ body {
     text-decoration: none;
     font-size: 16px;
     color: #fff;
+    cursor: pointer;
 }
 
 .tabcontent {
@@ -58,6 +64,7 @@ body {
 
 .nav-link:hover {
     color: #426BFB;
+    text-decoration: underline;
 }
 
 .header {
